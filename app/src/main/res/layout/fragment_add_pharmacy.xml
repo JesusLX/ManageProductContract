@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:text="Address"
         android:id="@+id/txvAddress"
         android:layout_below="@+id/edtCif"/>
     <EditText
@@ -28,24 +28,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:text="Phone"
         android:id="@+id/txvPhone"
         android:layout_below="@+id/edtAddress"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtPhone"
+        android:inputType="phone"
         android:layout_below="@id/txvPhone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:text="Email"
         android:id="@+id/txvEmail"
         android:layout_below="@+id/edtPhone"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtEmail"
+        android:inputType="textEmailAddress"
         android:layout_below="@+id/txvEmail"/>
     <Button
         android:layout_width="wrap_content"
