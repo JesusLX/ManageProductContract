@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="actionModeStyle">@style/Widget.ActionMode</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_del_24dp</item>
+    </style>
+    <style name="error" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+    <style name="hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+    <style name="Widget.ActionMode" parent="Widget.AppCompat.ActionMode">
+        <item name="background">@color/backgroun_action_mode</item>
+        <item name="android:background">@color/backgroun_action_mode</item>
+        <item name="android:actionModeBackground">@color/backgroun_action_mode</item>
+        <item name="actionModeBackground">@color/backgroun_action_mode</item>
+
+    </style>
+
+</resources>

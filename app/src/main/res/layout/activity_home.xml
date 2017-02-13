@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/content_navigation"
+    tools:context="com.limox.jesus.manageproductcontentprovider.Home_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/h_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+<!-- Definicion de la ToolBar-->
+    <FrameLayout
+        android:id="@+id/activity_frame_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

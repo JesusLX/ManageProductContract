@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ManageProductContentProvider</string>
+    <string name="action_add_product">Añadir</string>
+    <string name="action_sort_alphabetically">Ordenar alfabéticamente</string>
+    <string name="action_settings_general">Configuracion general</string>
+    <string name="action_settings_account">Configuracion de cuenta</string>
+    <string name="cbRemember_text">Remember me</string>
+    <string name="login">Login</string>
+    <string name="messagePassword">Introducce password</string>
+    <string name="messageUser">Introduce a user name</string>
+    <string name="txvPassword_text">Password:</string>
+    <string name="txvUser_text">User:</string>
+    <string name="txvDescription_text">Description</string>
+    <string name="txvStock_text">Stock</string>
+    <string name="txvPrice_text">Price</string>
+    <string name="txvDosage_text">Dosage</string>
+    <string name="txvBrand_text">Brand</string>
+    <string name="txvName_text">Name</string>
+    <string name="txvPicture_text">Choose picture</string>
+    <string name="iBtnPicture_Description">Pick a mImage for the product</string>
+    <string name="txvforgot_text"><a href="https://ellimonerox.tumblr.com">Forgot password?</a></string>
+    <string name="txvcreateu_text">Create user</string>
+    <string name="crtUser_edtName">Name</string>
+    <string name="crtUser_edtEmail">Email</string>
+    <string name="crtUser_edtPassword">Password</string>
+    <string name="crtUser_txvProvincia">Provincia</string>
+    <string name="crtUser_txvLocalidad">Localidad</string>
+    <string name="crtUser_man">Man</string>
+    <string name="crtUser_woman">Woman</string>
+    <string name="crtUser_other">Other</string>
+    <string name="crtUser_title">Create user</string>
+    <string name="crtUser_rbtParticular">Particular</string>
+    <string name="crtUser_rbtBusiness">Business</string>
+    <string name="crtUser_cbPubli">Recibir publicicdad</string>
+    <string name="crtUser_cbRemember">Remember user</string>
+    <string name="message_county_city">Ha seleccionado %1$s (%2$s)</string>
+    <string name="action_create_product">Crear</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nodata">No data values</string>
+    <string name="error_delete">Error at delete sentence</string>
+    <string name="error_update">Error at update sentence</string>
+
+</resources>
