@@ -117,6 +117,7 @@ public class DatabaseContract {
                 , TABLE_NAME, BaseColumns._ID, COLUMN_PHARMACY_ID, REFERENCE_PHARMACY_ID, COLUMN_DATE, COLUMN_STATUS, REFERENCE_STATUS_ID);
         public static final String SQL_DELETE_ENTRIES = String.format("DROP TABLE IF EXISTS %s ", TABLE_NAME);
         public static final String DEFAULT_SORT = COLUMN_PHARMACY_ID;
+        public static final String INVOICE_JOIN = " i INNER JOIN pharmacy p ON i._id = p._id INNER JOIN invoicestatus s ON i.status = s._id";
     }
 
     public static class InvoiceLineEntry implements BaseColumns {

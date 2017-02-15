@@ -104,9 +104,7 @@ public class ManageProductProvider extends ContentProvider {
                     sortOrder = DatabaseContract.PharmacyEntry.DEFAULT_SORT;
                 break;
             case INVOICE:
-                queryBuilder.setTables(DatabaseContract.InvoiceEntry.TABLE_NAME);
-                if (TextUtils.isEmpty(sortOrder))
-                    sortOrder = DatabaseContract.InvoiceEntry.DEFAULT_SORT;
+                queryBuilder.setTables(DatabaseContract.InvoiceEntry.TABLE_NAME + DatabaseContract.InvoiceEntry.INVOICE_JOIN);
                 break;
             case INVOICE_ID:
                 queryBuilder.setTables(DatabaseContract.InvoiceEntry.TABLE_NAME);

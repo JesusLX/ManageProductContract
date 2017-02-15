@@ -78,7 +78,14 @@ public class ManageProductContract {
         public static final String IDPHARMACY = "idPharmacy";
         public static final String DATE = "date";
         public static final String STATUS = "status";
-        public static final String[] PROJECTION = new String[]{BaseColumns._ID, IDPHARMACY, DATE, STATUS};
+        public static final String[] PROJECTION = new String[]{
+                DatabaseContract.PharmacyEntry.COLUMN_CIF,
+
+                "i." + DatabaseContract.InvoiceStatusEntry.COLUMN_NAME,
+                DATE,
+                "s." + InvoiceStatus.NAME,
+                "s." + InvoiceStatus._ID
+        };
     }
 
     public static class InvoiceLine implements BaseColumns {
