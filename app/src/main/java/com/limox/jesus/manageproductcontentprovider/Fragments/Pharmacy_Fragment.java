@@ -85,10 +85,7 @@ public class Pharmacy_Fragment extends Fragment implements PharmacyPresenter.Vie
 
     @Override
     public void setCursorPharmacy(Cursor cursor) {
-        mlvAdapter = new PharmacyAdapter(getContext(),cursor,1);
-        mLvPharmacy.setAdapter(mlvAdapter);
-        cursor = null;
-        DatabaseHelper.getInstance().closeDatabase();
+        mlvAdapter.changeCursor(cursor);
 
     }
 

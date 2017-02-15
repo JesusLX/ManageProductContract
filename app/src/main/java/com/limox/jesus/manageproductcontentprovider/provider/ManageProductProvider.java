@@ -186,6 +186,10 @@ public class ManageProductProvider extends ContentProvider {
                 regId = sqLiteDatabase.insert(tableName,null,values);
                 newUri = ContentUris.withAppendedId(uri,regId);
                 break;
+            case PHARMACY:
+                regId = sqLiteDatabase.insert(DatabaseContract.PharmacyEntry.TABLE_NAME,null,values);
+                newUri = ContentUris.withAppendedId(uri,regId);
+                break;
         }
 
         if (regId != -1){

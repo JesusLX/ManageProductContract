@@ -18,6 +18,8 @@ import com.limox.jesus.manageproductcontentprovider.model.Pharmacy;
 public class PharmacyAdapter extends CursorAdapter {
 
 
+
+
     public class PharmacyHolder{
         TextView txvCif;
         TextView txvAddress;
@@ -64,4 +66,6 @@ public class PharmacyAdapter extends CursorAdapter {
         pharmacy.setEmail(getCursor().getString(4));
 
         return pharmacy;
-    }}
+    }
+
+}

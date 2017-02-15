@@ -5,6 +5,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 
+import com.limox.jesus.manageproductcontentprovider.adapter.PharmacyAdapter;
 import com.limox.jesus.manageproductcontentprovider.model.Pharmacy;
 
 /**
@@ -22,5 +23,6 @@ public interface PharmacyPresenter {
         Context getContext();
         void setCursorPharmacy(Cursor cursor);
         void onDestroy();
+
     }
 }

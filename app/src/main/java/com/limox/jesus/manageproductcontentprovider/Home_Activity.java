@@ -15,15 +15,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.limox.jesus.manageproductcontentprovider.Fragments.AddInvoice_Fragment;
 import com.limox.jesus.manageproductcontentprovider.Fragments.AddPharmacy_Fragment;
+import com.limox.jesus.manageproductcontentprovider.Fragments.InvoicePharmacy_Fragment;
 import com.limox.jesus.manageproductcontentprovider.Fragments.ListProduct_Fragment;
 import com.limox.jesus.manageproductcontentprovider.Fragments.ManageProduct_Fragment;
 import com.limox.jesus.manageproductcontentprovider.Fragments.MultiListProduct_Fragment;
 import com.limox.jesus.manageproductcontentprovider.Fragments.Pharmacy_Fragment;
+import com.limox.jesus.manageproductcontentprovider.interfaces.InvoicePharmacyPresenter;
 import com.limox.jesus.manageproductcontentprovider.settings.AccountSettings_Activity;
 import com.limox.jesus.manageproductcontentprovider.settings.GeneralSettings_Activity;
 
-public class Home_Activity extends AppCompatActivity implements ListProduct_Fragment.ListProductListener, ManageProduct_Fragment.ManageProductListener, MultiListProduct_Fragment.ListProductListener,Pharmacy_Fragment.OnPharmacyFragmentListener,AddPharmacy_Fragment.OnAddPharmacyFragmentListener {
+public class Home_Activity extends AppCompatActivity implements ListProduct_Fragment.ListProductListener, ManageProduct_Fragment.ManageProductListener, MultiListProduct_Fragment.ListProductListener,Pharmacy_Fragment.OnPharmacyFragmentListener,AddPharmacy_Fragment.OnAddPharmacyFragmentListener,InvoicePharmacy_Fragment.OnInvoicePharmacyFragmentListener {
 
     private ListProduct_Fragment listProductFragment;
     private ManageProduct_Fragment manageProductFragment;
@@ -88,7 +91,7 @@ public class Home_Activity extends AppCompatActivity implements ListProduct_Frag
                         showListPharmacy();
                         break;
                     case R.id.action_sales:
-                        showListProduct();
+                        startInvoices();
                         break;
                     default:
 
@@ -192,6 +195,22 @@ public class Home_Activity extends AppCompatActivity implements ListProduct_Frag
     public void startAddPharmacyFragmetn() {
 
         AddPharmacy_Fragment mlp = new AddPharmacy_Fragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.activity_frame_home, mlp);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+    @Override
+    public void startAddInvoices() {
+        AddInvoice_Fragment mlp = new AddInvoice_Fragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.activity_frame_home, mlp);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+    public void startInvoices() {
+        InvoicePharmacy_Fragment mlp = new InvoicePharmacy_Fragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.activity_frame_home, mlp);
         ft.addToBackStack(null);
