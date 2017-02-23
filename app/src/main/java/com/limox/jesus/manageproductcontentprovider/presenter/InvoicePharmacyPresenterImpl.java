@@ -20,12 +20,18 @@ public class InvoicePharmacyPresenterImpl implements InvoicePharmacyPresenter,Lo
     private Context mContext;
     private InvoicePharmacyPresenter.View view;
 
-    public InvoicePharmacyPresenterImpl(Context context) {
+    public InvoicePharmacyPresenterImpl(Context context,InvoicePharmacyPresenter.View view) {
         this.mContext = context;
+        this.view = view;
     }
 
     public void getAllInvoices(){
-        ((Activity) mContext).getLoaderManager().initLoader(0, null, this);
+        Loader<Cursor> loader = ((Activity)mContext).getLoaderManager().getLoader(0);
+        if (loader == null)
+            ((Activity) mContext).getLoaderManager().initLoader(0, null, this);
+        else
+            ((Activity) mContext).getLoaderManager().restartLoader(0, null, this);
+
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.limox.jesus.manageproductcontentprovider.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,13 +19,18 @@ import com.limox.jesus.manageproductcontentprovider.interfaces.InvoicePharmacyPr
 import com.limox.jesus.manageproductcontentprovider.presenter.InvoicePharmacyPresenterImpl;
 
 
-public class InvoicePharmacy_Fragment extends Fragment {
+public class InvoicePharmacy_Fragment extends Fragment implements InvoicePharmacyPresenter.View {
 
     private InvoicePharmacyCursorAdapter mAdapter;
     private InvoicePharmacyPresenter mPresenter;
     private ListView mLvInvoices;
     private FloatingActionButton mFabAdd;
     private OnInvoicePharmacyFragmentListener mCallback;
+
+    @Override
+    public void setCursor(Cursor data) {
+        mAdapter.changeCursor(data);
+    }
 
     public interface OnInvoicePharmacyFragmentListener {
         void startAddInvoices();
@@ -34,7 +40,7 @@ public class InvoicePharmacy_Fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAdapter = new InvoicePharmacyCursorAdapter(getContext(),null,1);
-        mPresenter = new InvoicePharmacyPresenterImpl(getContext());
+        mPresenter = new InvoicePharmacyPresenterImpl(getContext(),this);
     }
 
     @Override
@@ -49,7 +55,7 @@ public class InvoicePharmacy_Fragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
+        mPresenter.getAllInvoices();
 
     }
 

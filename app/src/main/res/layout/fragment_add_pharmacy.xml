@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CIF"
-        android:id="@+id/txvCif"/>
+        android:id="@+id/txvName"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtCif"
-        android:layout_below="@+id/txvCif"/>
+        android:layout_below="@+id/txvName"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

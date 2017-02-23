@@ -22,7 +22,7 @@ public class InvoicePharmacyCursorAdapter extends CursorAdapter {
     }
 
     class InvoicePharmacyHolder{
-        TextView txvCif;
+        TextView txvName;
         TextView txvAddress;
         TextView txvDate;
         TextView txvState;
@@ -34,7 +34,6 @@ public class InvoicePharmacyCursorAdapter extends CursorAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View rootView = inflater.inflate(R.layout.item_invoice_pharmacy,parent,false);
         InvoicePharmacyHolder holder = new InvoicePharmacyHolder();
-        holder.txvCif = (TextView) rootView.findViewById(R.id.txvCif);
         holder.txvAddress = (TextView) rootView.findViewById(R.id.txvAddress);
         holder.txvDate = (TextView) rootView.findViewById(R.id.txvDate);
         holder.txvState = (TextView) rootView.findViewById(R.id.txvState);
@@ -45,9 +44,8 @@ public class InvoicePharmacyCursorAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         InvoicePharmacyHolder holder = (InvoicePharmacyHolder) view.getTag();
-        holder.txvCif.setText(cursor.getString(cursor.getColumnIndex(ManageProductContract.Pharmacy.CIF)));
         holder.txvAddress.setText(cursor.getString(cursor.getColumnIndex(ManageProductContract.Pharmacy.ADDRESS)));
         holder.txvDate.setText(cursor.getString(cursor.getColumnIndex(ManageProductContract.Invoice.DATE)));
-        holder.txvState.setText(cursor.getString(cursor.getColumnIndex(ManageProductContract.Pharmacy.CIF)));
+        holder.txvState.setText(cursor.getString(cursor.getColumnIndex(ManageProductContract.InvoiceStatus.NAME )));
     }
 }

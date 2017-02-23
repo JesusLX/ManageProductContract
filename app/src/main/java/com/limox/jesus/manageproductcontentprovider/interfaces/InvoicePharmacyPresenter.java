@@ -7,6 +7,8 @@ import android.database.Cursor;
  */
 
 public interface InvoicePharmacyPresenter {
+    void getAllInvoices();
+
     public interface View {
         void setCursor(Cursor data);
     }

@@ -81,8 +81,8 @@ public class ManageProductContract {
         public static final String[] PROJECTION = new String[]{
                 DatabaseContract.PharmacyEntry.COLUMN_CIF,
 
-                "i." + DatabaseContract.InvoiceStatusEntry.COLUMN_NAME,
-                DATE,
+                "i." + DatabaseContract.InvoiceEntry.COLUMN_DATE,
+                "p." + DatabaseContract.PharmacyEntry.COLUMN_ADDRESS,
                 "s." + InvoiceStatus.NAME,
                 "s." + InvoiceStatus._ID
         };

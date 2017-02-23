@@ -3,6 +3,7 @@ package com.limox.jesus.manageproductcontentprovider;
 import android.app.Application;
 import android.content.Context;
 
+import com.limox.jesus.manageproductcontentprovider.Services.InvoiceAlert_Service;
 import com.limox.jesus.manageproductcontentprovider.db.DatabaseHelper;
 
 /**
@@ -25,4 +26,9 @@ public class ManageProductApplication extends Application {
         context = this;
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        new InvoiceAlert_Service();
+    }
 }
